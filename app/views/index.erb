@@ -1,5 +1,11 @@
-<% if current_user %>
-<h1>You are logged in. Good job.</h1>
-<% else %>
-<h1>You are not logged in. You should log in!</h1> 
-<% end %>
+<div class="container">
+<h1>Welcome to Saltine News!</h1>
+  <h3> (All saltines all the time!) </h3>
+
+
+  <% @post.each do |post| %>
+    <%= "#{post.id} Title: '#{post.title}'" %>
+    <%= "By: " + find_username(post.id)%>
+  <% end %>
+
+</div>
