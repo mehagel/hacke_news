@@ -1,0 +1,15 @@
+<h2><%=@user.username%> is super saltay</h2>
+  My Posts: <br />
+  <ul>
+    <% get_posts(@user.id).each do |post|%>
+      <li><%= post.title %></li>
+    <%end%>
+  </ul>
+
+  My Comments: <br />
+    <ul>
+    <% get_comments(@user.id).each do |comment|%>
+      <li><%= comment.body%></li>
+    <%end%>
+  </ul>
+

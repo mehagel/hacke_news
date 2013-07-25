@@ -1,0 +1,17 @@
+<h2><%=@post.title%></h2>
+<ul>
+  <p>
+    <a href= '/users/<%=@post.user_id%>'><%=find_username_from_post(@post.id)%></a>
+  </p>
+      <p><% get_all_comments(@post.id).each do |comment| %>
+        <li><% comment.id %>
+        <ol>
+          <li><%= comment.body %>
+          <ul>
+            <li>by: <a href= '/users/<%=comment.user_id%>'> <%= find_username_from_comment(comment.id) %></a></li>
+          </ul>
+        </ol>
+      <%end%>
+    </li>
+    </ul>
+    </p>

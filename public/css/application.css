@@ -1,7 +1,13 @@
+body {
+   background-image: url('tumblr_m4x31kGC5x1qdso0o.jpg')
+
+}
 .container {
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
+  background-color: white;
+ 
 }
 
 input {
